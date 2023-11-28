@@ -1,3 +1,4 @@
+flask
 ﻿absl-py==2.0.0
 amzsear==2.0.1
 gunicorn
