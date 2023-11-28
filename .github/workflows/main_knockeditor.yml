@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'knockEditor'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8E0F8CE1F4CF4826820816A55F6C7F33 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FF15C6BADE2C4DF49AE64C96F05872E9 }}
