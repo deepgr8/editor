@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEAP CONVERTER</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="/">
+                    <h1>Leap <span>Converter</span></h1>
+                </a>
+            </div>
+            <div class="nav-left">
+                <ul class="nav-links">
+                    <li><a href="/merge">MERGE PDF</a></li>
+                    <li><a href="/split">SPLIT PDF</a></li>
+                    <li> <a href="/compress">COMPRESS PDF</a></li>
+                    <li class="dropdown" onclick="convertDropdown()"><a href="#">CONVERT PDF <i
+                                class="bi bi-caret-down-fill"></i></a>
+                        <div class="convert-dropdown">
+                            <i class="bi bi-caret-up-fill"></i>
+                            <ul class="dropdown-content">
+                                <li><span>Convert to PDF</span>
+                                    <ul class="dropdown-content-ul">
+                                        <li><a href="/JPGtopdf"><img src="/static/assets/jpgToPdf.svg"
+                                                    alt="">JPG TO
+                                                PDF</a></li>
+                                        <li><a href="/wordtopdf"><img src="/static/assets/wordToPdf.svg"
+                                                    alt="">WORD
+                                                TO PDF</a>
+                                        </li>
+                                        <li><a href="/powerpointtopdf"><img src="/static/assets/pptToPdf.svg"
+                                                    alt="">POWERPOINT TO PDF</a>
+                                        </li>
+                                        <li><a href="/Exceltopdf"><img src="/static/assets/excleToPdf.svg"
+                                                    alt="">EXCEL TO
+                                                PDF</a></li>
+                                        <li><a href="/htmltoPdf"><img src="/static/assets/htmlToPdf.svg"
+                                                    alt="">HTML
+                                                TO PDF</a></li>
+                                    </ul>
+                                </li>
+                                <li><span>Convert from PDF</span>
+                                    <ul class="dropdown-content-ul">
+                                        <li><a href="/pdftoJpg"><img src="/static/assets/pdfToJpg.svg"
+                                                    alt="">PDF TO
+                                                JPG</a></li>
+                                        <li><a href="/PdftoWord"><img src="/static/assets/pdfToWord.svg"
+                                                    alt="">PDF
+                                                TO WORD</a>
+                                        </li>
+                                        <li><a href="/Pdftopower"><img src="/static/assets/pdfToPpt.svg"
+                                                    alt="">PDF TO POWERPOINT</a>
+                                        </li>
+                                        <li><a href="/pdfToExcel"><img src="/static/assets/pdfToExcle.svg"
+                                                    alt="">PDF
+                                                TO
+                                                EXCEL</a></li>
+                                        <li><a href="#"><img src="/static/assets/pdfToWPdfa.svg"
+                                                    alt="">PDF
+                                                TO PDF/A</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown" onclick="toolsDropdown()"><a href="#"><span>ALL PDF TOOLS <i
+                                    class="bi bi-caret-down-fill"></i></span><i class="bi bi-wrench"
+                                style="display: none;"></i></a>
+                        <div class="tools-dropdown">
+                            <i class="bi bi-caret-up-fill"></i>
+                            <ul class="dropdown-content">
+                                <li><span>ORGANIZE PDF</span>
+                                    <ul class="dropdown-content-ul">
+                                        <li><a href="/merge"><img src="/static/assets/mergePdf.svg"
+                                                    alt="">MERGE
+                                                PDF</a></li>
+                                        <li><a href="/split"><img src="/static/assets/splitPdf.svg"
+                                                    alt="">SPLIT
+                                                PDF</a>
+                                        </li>
+                                        <li><a href="/organize"><img src="/static/assets/organizepdf.svg"
+                                                    alt="">ORGANIZE PDF</a>
+                                        </li>
+                                        <li><a href="#"><img src="/static/assets/scanToPdf.svg" alt="">SCAN TO
+                                                PDF</a></li>
+                                    </ul>
+                                </li>
+                                <li><span>OPTIMIZE PDF</span>
+                                    <ul class="dropdown-content-ul">
+                                        <li><a href="/compress"><img src="/static/assets/compressPdf.svg"
+                                                    alt="">COMPRESS PDF</a>
+                                        </li>
+                                        <li><a href="/repair"><img src="/static/assets/repairPdf.svg"
+                                                    alt="">REPAIR PDF</a>
+                                        </li>
+                                        <li><a href="/ocr"><img src="/static/assets/ocrPdf.svg" alt="">OCR
+                                                PDF</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><span>Convert to PDF</span>
+                                    <ul class="dropdown-content-ul">
+                                        <li><a href="/JPGtopdf"><img src="/static/assets/jpgToPdf.svg"
+                                                    alt="">JPG TO
+                                                PDF</a></li>
+                                        <li><a href="/wordtopdf"><img src="/static/assets/wordToPdf.svg"
+                                                    alt="">WORD
+                                                TO PDF</a>
+                                        </li>
+                                        <li><a href="/powerpointtopdf"><img src="/static/assets/pptToPdf.svg"
+                                                    alt="">POWERPOINT TO PDF</a>
+                                        </li>
+                                        <li><a href="/Exceltopdf"><img src="/static/assets/excleToPdf.svg"
+                                                    alt="">EXCEL TO
+                                                PDF</a></li>
+                                        <li><a href="/htmltoPdf"><img src="/static/assets/htmlToPdf.svg"
+                                                    alt="">HTML
+                                                TO PDF</a></li>
+                                    </ul>
+                                </li>
+                                <li><span>Convert from PDF</span>
+                                    <ul class="dropdown-content-ul">
+                                        <li><a href="/pdftoJpg"><img src="/static/assets/pdfToJpg.svg"
+                                                    alt="">PDF TO
+                                                JPG</a></li>
+                                        <li><a href="/PdftoWord"><img src="/static/assets/pdfToWord.svg"
+                                                    alt="">PDF
+                                                TO WORD</a>
+                                        </li>
+                                        <li><a href="/Pdftopower"><img src="/static/assets/pdfToPpt.svg"
+                                                    alt="">PDF TO POWERPOINT</a>
+                                        </li>
+                                        <li><a href="/pdfToExcel"><img src="/static/assets/pdfToExcle.svg"
+                                                    alt="">PDF
+                                                TO
+                                                EXCEL</a></li>
+                                        <li><a href="#"><img src="/static/assets/pdfToWPdfa.svg"
+                                                    alt="">PDF
+                                                TO PDF/A</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><span>EDIT PDF</span>
+                                    <ul class="dropdown-content-ul">
+                                        <li><a href="/rotate"><img src="/static/assets/rotatePdf.svg"
+                                                    alt="">ROTATE PDF</a></li>
+                                        <li><a href="/pageNum"><img src="/static/assets/pageNoPdf.svg"
+                                                    alt="">ADD
+                                                PAGE NUMBER</a>
+                                        </li>
+                                        <li><a href="/watermark"><img src="/static/assets/watermark.svg"
+                                                    alt="">ADD Watermark</a>
+                                        </li>
+                                        <li><a href="/editPdf"><img src="/static/assets/editPdf.svg"
+                                                    alt="">EDIT
+                                                PDF</a></li>
+                                    </ul>
+                                </li>
+                                <li><span>PDF SECUIRTY</span>
+                                    <ul class="dropdown-content-ul">
+                                        <li><a href="/unlockPdf"><img src="/static/assets/unlockPdf.svg"
+                                                    alt="">UNLOCK PDF</a></li>
+                                        <li><a href="/protectPdf"><img src="/static/assets/protectPdf.svg"
+                                                    alt="">PROTECT PDF</a>
+                                        </li>
+                                        <li><a href="/sign"><img src="/static/assets/signPdf.svg"
+                                                    alt="">SIGN
+                                                PDF</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="login">
+        <h1>Leap <span>Converter</span></h1>
+        <h2> LOGIN TO YOUR ACCOUNT </h2>
+        <button class="loginBtn loginBtn--facebook">
+            Login with Facebook
+        </button>
+        <button class="loginBtn loginBtn--google">
+            Login with Google
+        </button>
+        <form id="login" method="get" action="login.php">
+            <label><i class="fa fa-user"></i>
+            </label>
+            <input type="text" name="Uname" id="Uname" placeholder="Username">
+            <br><br>
+            <label><i class="fa fa-lock"></i>
+            </label>
+            <input type="Password" name="Pass" id="Pass" placeholder="Password">
+            <br><br>
+            <button class="log">Login</button>
+        </form>
+    </div>
+</body>
+</html>
