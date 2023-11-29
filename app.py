@@ -383,4 +383,4 @@ def ocr():
     return render_template("ocr pdf preview.html")
 
 # if __name__ == '__main__':
-#     app.run(debug=True)
+#     app.run()
